@@ -5,12 +5,10 @@ import { google } from "googleapis";
 const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  process.env.REDIRECT_URI
+  process.env.REDIRECT_URL
 );
 
-const refresh = process.env.REFRESH_TOKEN;
-
-oAuth2Client.setCredentials({ refresh_token: refresh });
+oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
