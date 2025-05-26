@@ -2,13 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
 
-// const CLIENT_ID =
-// ;
-// const CLIENT_SECRET =
-// const REDIRECT_URI =
-// const REFRESH_TOKEN =
-//   "1//04yVCOfKzGUGiCgYIARAAGAQSNwF-L9IrEWK40ELBTmXffNBRMfqsDR6UU4Vs5djle0ia8Q5nHnz0UUmqn5UwzY_alo2ixbs_9G0";
-
 const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
