@@ -8,7 +8,9 @@ const oAuth2Client = new google.auth.OAuth2(
   process.env.REDIRECT_URI
 );
 
-oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
+const refresh = process.env.REFRESH_TOKEN;
+
+oAuth2Client.setCredentials({ refresh_token: refresh });
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
