@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jean Bosco" }],
   creator: "Jean Bosco",
-  metadataBase: new URL("https://your-portfolio-domain.com"),
+  metadataBase: new URL("https://jeanbosco-dev.vercel.app"),
   openGraph: {
     title: "Jean Bosco | Full-Stack Developer",
     description:
       "Crafting modern web applications with clean design and robust backend solutions.",
-    url: "https://your-portfolio-domain.com",
+    url: "https://jeanbosco-dev.vercel.app",
     siteName: "Jean Bosco Portfolio",
     images: [
       {

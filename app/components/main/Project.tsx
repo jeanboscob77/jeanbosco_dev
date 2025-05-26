@@ -5,15 +5,16 @@ import Image from "next/image";
 import "aos/dist/aos.css"; // Import AOS styles
 import AOS from "aos"; // Import AOS
 import { useEffect } from "react"; // For initializing AOS
+import InfoTech from "../../../public/Info_tech.png";
 
 const projects = [
   {
-    title: "Citizen Engagement System",
+    title: "InfoTech Scholars – Educational Blog Platform",
     description:
-      "A platform for citizens to submit complaints or feedback on public services. Features real-time updates, categorization, and government responses.",
-    image: "/projects/citizen.png", // replace with your image path
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-    link: "/projects/citizen-engagement",
+      "A dynamic platform dedicated to sharing insightful articles and resources on education and technology. It serves as a hub for educators, students, and tech enthusiasts to explore topics related to learning methodologies, technological advancements in education, and academic resources.",
+    image: InfoTech, // replace with your image path
+    technologies: ["React", "Node.js", "Mysql", "Express", "Bootstrap"],
+    link: "https://www.infotechscholars.com/",
   },
   {
     title: "EdTech Course Platform",

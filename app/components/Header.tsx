@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
+import Jean from "../../public/Jean Bosco.png";
 
 type NavItem = {
   name: string;
@@ -56,7 +57,9 @@ const Header: React.FC = () => {
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md p-4 dark:bg-gray-900/70">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-xl font-bold text-gray-800 dark:text-white">
-          <Link href="/">John Doe</Link>
+          <Link href="/">
+            <Image src={Jean} alt="Logo" width={60} className="rounded-full" />
+          </Link>
         </div>
 
         {/* Desktop Nav */}

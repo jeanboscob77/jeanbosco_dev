@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "Backend Developer",
     "MERN Stack",
   ],
-  authors: [{ name: "Jean Bosco B", url: "https://yourportfolio.com" }],
+  authors: [{ name: "Jean Bosco B", url: "https://jeanbosco-dev.vercel.app" }],
   creator: "Jean Bosco",
   openGraph: {
     title: "About Me | Jean Bosco",
     description:
       "I'm a full-stack developer passionate about building intuitive and scalable web applications. Here's my story and tech stack.",
-    url: "https://yourportfolio.com/about",
+    url: "https://jeanbosco-dev.vercel.app/about",
     siteName: "Jean Bosco Portfolio",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ["https://yourportfolio.com/og-image.jpg"],
     creator: "@yourTwitterHandle", // Optional
   },
-  metadataBase: new URL("https://yourportfolio.com"),
+  metadataBase: new URL("https://jeanbosco-dev.vercel.app"),
 };
 
 const AoutPage = () => {
