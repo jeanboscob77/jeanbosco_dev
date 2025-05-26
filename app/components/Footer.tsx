@@ -36,10 +36,10 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Me</h3>
             <div className="flex space-x-6 text-2xl">
-              <Link href="https://twitter.com/yourname" target="_blank">
+              <Link href="https://x.com/bjeanbosco48" target="_blank">
                 <FaTwitter className="hover:text-blue-400 transition" />
               </Link>
-              <Link href="https://github.com/yourname" target="_blank">
+              <Link href="https://github.com/jeanboscob77" target="_blank">
                 <FaGithub className="hover:text-gray-400 transition" />
               </Link>
               <Link href="https://linkedin.com/in/yourname" target="_blank">

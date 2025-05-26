@@ -58,7 +58,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-xl font-bold text-gray-800 dark:text-white">
           <Link href="/">
-            <Image src={Jean} alt="Logo" width={60} className="rounded-full" />
+            <Image src={Jean} alt="Logo" className="rounded-full md:w-10 w-8" />
           </Link>
         </div>
 

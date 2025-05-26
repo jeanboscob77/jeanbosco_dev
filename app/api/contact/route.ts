@@ -9,16 +9,17 @@ const oAuth2Client = new google.auth.OAuth2(
 );
 
 oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
-console.log("ENV values on server:", {
-  CLIENT_ID: process.env.CLIENT_ID,
-  CLIENT_SECRET: !!process.env.CLIENT_SECRET,
-  REFRESH_TOKEN: !!process.env.REFRESH_TOKEN,
-  REDIRECT_URL: process.env.REDIRECT_URL,
-});
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { name, email, message } = body;
+
+  console.log("ENV values on server:", {
+    CLIENT_ID: process.env.CLIENT_ID,
+    CLIENT_SECRET: !!process.env.CLIENT_SECRET,
+    REFRESH_TOKEN: !!process.env.REFRESH_TOKEN,
+    REDIRECT_URL: process.env.REDIRECT_URL,
+  });
 
   let accessToken;
   try {
