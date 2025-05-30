@@ -7,11 +7,12 @@ import AOS from "aos"; // Import AOS
 import { useEffect } from "react"; // For initializing AOS
 import InfoTech from "../../../public/Info_tech.png";
 import Edtech from "../../../public/EdTech.png";
+import PublicEcho from "../../../public/publicecho.jpeg";
 const projects = [
   {
-    title: "InfoTech Scholars – Educational Blog Platform",
+    title: "InfoTech Scholars – Smart Online Services & Educational Hub",
     description:
-      "A dynamic platform dedicated to sharing insightful articles and resources on education and technology. It serves as a hub for educators, students, and tech enthusiasts to explore topics related to learning methodologies, technological advancements in education, and academic resources.",
+      "InfoTech Scholars is a versatile platform that combines educational blogging with essential digital services. Alongside sharing insightful content on education and technology, it provides assistance with key online services such as visa applications, university admissions, Irembo services, and more. Our mission is to simplify access to public and academic services while promoting digital literacy.",
     image: InfoTech, // replace with your image path
     technologies: ["React", "Node.js", "Mysql", "Express", "Bootstrap"],
     link: "https://www.infotechscholars.com/",
@@ -23,6 +24,14 @@ const projects = [
     image: Edtech, // replace with your image path
     technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
     link: "https://ed-tech-red.vercel.app",
+  },
+  {
+    title: "PublicEcho – Citizen Feedback & Complaint Portal",
+    description:
+      "PublicEcho is a civic engagement platform that empowers citizens to voice their concerns and report issues directly to relevant authorities. With a clean interface and seamless experience, the system ensures that public complaints are categorized, tracked, and addressed transparently. Built to bridge the gap between the people and their leaders, PublicEcho amplifies community voices for better governance and accountability.",
+    image: PublicEcho, // replace with your image path
+    technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
+    link: "https://publicecho.example.com", // replace with your actual link
   },
 ];
 
