@@ -6,7 +6,7 @@ import "aos/dist/aos.css"; // Import AOS styles
 import AOS from "aos"; // Import AOS
 import { useEffect } from "react"; // For initializing AOS
 import InfoTech from "../../../public/Info_tech.png";
-
+import Edtech from "../../../public/EdTech.png";
 const projects = [
   {
     title: "InfoTech Scholars – Educational Blog Platform",
@@ -20,17 +20,9 @@ const projects = [
     title: "EdTech Course Platform",
     description:
       "An online platform for students and employees to explore and enroll in courses. Built with MERN stack and modern UX principles.",
-    image: "/projects/edtech.png", // replace with your image path
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+    image: Edtech, // replace with your image path
+    technologies: ["Next.js", "MongoDB", "Tailwind CSS"],
     link: "https://ed-tech-red.vercel.app",
-  },
-  {
-    title: "E-commerce Web App",
-    description:
-      "A scalable e-commerce web app with advanced filtering and shopping cart functionality.",
-    image: "/projects/ecommerce.png", // replace with your image path
-    technologies: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
-    link: "/projects/ecommerce",
   },
 ];
 
