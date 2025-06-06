@@ -22,7 +22,7 @@ export default function ContactForm() {
 
     try {
       const response = await axios.post(
-        "https://jeanbosco-dev.vercel.app/api/contact",
+        "http://localhost:3000/api/contact",
         formData
       );
       if (response.data.success) {
