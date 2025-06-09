@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Import motion from Framer Motion
 import Jean from "../../../public/Jean Bosco.jpg";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function HomePage() {
   return (
@@ -39,12 +40,28 @@ export default function HomePage() {
         </motion.h1>
 
         <motion.h2
-          className="text-2xl font-semibold mb-6"
+          className="text-2xl font-semibold mb-6 h-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Creative Web Developer & Designer
+          <Typewriter
+            words={[
+              "Creative Web Developer",
+              "Backend Developer",
+              "Frontend Developer",
+              "Tech Enthusiast",
+              "Problem Solver",
+              "Full stack developer",
+              "Database Administrator",
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
         </motion.h2>
 
         <motion.p
@@ -76,6 +93,28 @@ export default function HomePage() {
             Contact Me
           </Link>
         </motion.div>
+        {/* CALL TO ACTION SECTION */}
+        <motion.section
+          className="mt-16 bg-blue-600 dark:bg-purple-700 text-white py-10 px-6 rounded-xl shadow-xl max-w-3xl mx-auto text-center lg:text-left"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold mb-4">
+            Let’s build something amazing!
+          </h2>
+          <p className="text-lg mb-6">
+            Whether you need a developer for a project or just want to connect,
+            I’m open to opportunities and collaborations.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-blue-600 dark:text-purple-700 font-semibold px-6 py-3 rounded-lg shadow-md hover:scale-105 transition-transform"
+          >
+            Contact Me
+          </Link>
+        </motion.section>
       </main>
     </div>
   );
