@@ -1,7 +1,25 @@
+"use client";
 import Link from "next/link";
 import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import { ArrowUp, Mail, MessageCircle, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function Footer() {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopBtn(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-100 py-6">
       <div className="max-w-7xl mx-auto px-6">
@@ -50,8 +68,24 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
-            <p className="text-gray-300">Email: bjeanbosco48@email.com</p>
-            <p className="text-gray-300">Phone: +250 783 214 787</p>
+            <p className="text-gray-300 flex items-center">
+              <span className="mr-3">
+                <Mail />
+              </span>{" "}
+              bjeanbosco48@gmail.com
+            </p>
+            <p className="text-gray-300 flex items-center mt-3">
+              <span className="mr-3">
+                <Phone />
+              </span>{" "}
+              +250 783 214 787
+            </p>
+            <p className="text-gray-300 flex items-center mt-3">
+              <span className="mr-3">
+                <BsWhatsapp size={24} className="text-green-600" />
+              </span>{" "}
+              +250 783 214 787
+            </p>
           </div>
         </div>
 
@@ -61,6 +95,16 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Jean Bosco. All rights reserved.
           </p>
         </div>
+        {/* Back to top */}
+        {showTopBtn && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 p-2 md:p-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition z-50"
+            aria-label="Back to top"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </button>
+        )}
       </div>
     </footer>
   );
