@@ -64,20 +64,18 @@ export default function ProjectPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <section className="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
         {projects.map((project) => (
           <div
             key={project.title}
             className="bg-white dark:bg-gray-800 rounded-lg shadow-lg transform hover:scale-105 transition-all"
-            data-aos="flip-left"
-            data-aos-delay="200"
           >
             <Image
               src={project.image}
               alt={project.title}
               width={600}
               height={400}
-              className="rounded-t-lg w-full h-48 object-cover"
+              className="rounded-t-lg w-full h-56 object-cover"
             />
             <div className="p-6">
               <h3
