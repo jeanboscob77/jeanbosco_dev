@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const skills = [
   "React",
@@ -15,7 +17,11 @@ const skills = [
   "JWT Auth",
 ];
 
+const values = ["Integrity", "Innovation", "Service", "Faith", "Collaboration"];
+
 export default function AboutPage() {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
   return (
     <main className="px-6 py-20 max-w-6xl mx-auto text-gray-900 dark:text-gray-100 font-sans">
       {/* Header */}
@@ -42,30 +48,126 @@ export default function AboutPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400">
+        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">
           My Journey
         </h2>
-        <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          <p>
-            With a background in Business Information Technology, I discovered a
-            passion for development early on. The thrill of building something
-            from scratch and solving real-world problems through code quickly
-            became my mission.
-          </p>
-          <p>
-            I've worked on impactful platforms in education, public service, and
-            community engagement—learning to balance clean design, intuitive UX,
-            and scalable backend infrastructure.
-          </p>
-          <p>
-            I'm currently expanding my skillset, exploring cloud technologies
-            and contributing to open-source projects that align with my values
-            of accessibility and innovation.
-          </p>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <p className="text-gray-700 dark:text-gray-300">
+              With a background in Business Information Technology, I discovered
+              a passion for development early on.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <p className="text-gray-700 dark:text-gray-300">
+              I've worked on impactful platforms in education, public service,
+              and community engagement—balancing clean design and scalable
+              backend infrastructure.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <p className="text-gray-700 dark:text-gray-300">
+              I'm expanding my skillset, exploring cloud technologies and
+              contributing to open-source projects focused on accessibility and
+              innovation.
+            </p>
+          </div>
         </div>
       </motion.section>
 
-      {/* Skills */}
+      {/* Mission, Vision, Core Values */}
+      <motion.section
+        className="mb-20"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">
+          What Drives Me
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              Mission
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              To empower lives and communities by building digital products that
+              make access to services, learning, and engagement seamless and
+              impactful.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              Vision
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300">
+              A future where ethical tech bridges gaps in education, governance,
+              and spiritual growth across Africa and beyond.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center">
+            <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              Core Values
+            </h3>
+            <ul className="list-disc list-inside text-left text-gray-700 dark:text-gray-300">
+              {values.map((value) => (
+                <li key={value}>{value}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Counters */}
+      <motion.section
+        ref={ref}
+        className="mb-20"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">
+          Stats
+        </h2>
+        {inView && (
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+              <h3 className="text-5xl font-extrabold text-blue-600 dark:text-blue-400">
+                <CountUp end={5} duration={3} />+
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mt-2">Projects</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+              <h3 className="text-5xl font-extrabold text-blue-600 dark:text-blue-400">
+                <CountUp end={1} duration={3} />
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mt-2">
+                Years Experience
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+              <h3 className="text-5xl font-extrabold text-blue-600 dark:text-blue-400">
+                <CountUp end={20} duration={3} />+
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mt-2">
+                Students Impacted
+              </p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+              <h3 className="text-5xl font-extrabold text-blue-600 dark:text-blue-400">
+                <CountUp end={1000} duration={3} />+
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mt-2">
+                Hours Coded
+              </p>
+            </div>
+          </div>
+        )}
+      </motion.section>
+
+      {/* Tech Stack */}
       <motion.section
         className="mb-24"
         initial={{ opacity: 0, y: 50 }}
@@ -73,7 +175,7 @@ export default function AboutPage() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400">
+        <h2 className="text-4xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">
           Tech Stack
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
@@ -102,7 +204,7 @@ export default function AboutPage() {
         </h3>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto">
           Have a project in mind or want to collaborate? I'd love to hear from
-          you. Let's turn ideas into reality together.
+          you.
         </p>
         <Link
           href="/contact"
