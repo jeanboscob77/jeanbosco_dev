@@ -47,9 +47,7 @@ const Header: React.FC = () => {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) {
-    return null; // or a loading spinner
-  }
+  if (!mounted) return null;
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -153,7 +151,7 @@ const Header: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed top-0 left-0 w-full max-w-sm h-full bg-white dark:bg-gray-900 z-50 p-6 overflow-y-auto relative"
+              className="fixed top-0 left-0 w-full max-w-sm h-screen bg-white dark:bg-gray-900 z-50 p-6 overflow-hidden"
             >
               <div className="divide-y divide-gray-300 dark:divide-gray-700">
                 {navItems.map(({ name, path, icon, external, download }) => {
