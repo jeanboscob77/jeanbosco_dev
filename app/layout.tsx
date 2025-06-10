@@ -4,14 +4,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Provider from "./components/Provider";
 
-export const metadata = {
-  title: "Jean Bosco Portfolio",
-  description: "Full-stack developer and portfolio site",
-  verification: {
-    google: "YOUR_VERIFICATION_CODE_HERE",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
