@@ -22,7 +22,7 @@ export default function ContactForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/contact",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
         formData
       );
       if (response.data.success) {
