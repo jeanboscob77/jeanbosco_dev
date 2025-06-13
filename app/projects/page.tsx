@@ -2,11 +2,11 @@ import ProjectPage from "../components/main/Project";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | Jean Bosco Portfolio",
+  title: "Projects | Jean Bosco",
   description:
     "A showcase of Jean Bosco's web development projects, built with modern technologies like React, Next.js, Node.js, and MongoDB.",
   keywords: [
-    "Jean Bosco projects",
+    "Jean Bosco",
     "Bikorimana Jean Bosco",
     "web development portfolio",
     "React projects",
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     title: "Projects | Jean Bosco Portfolio",
     description:
       "Explore web apps and tools developed by Jean Bosco using cutting-edge frontend and backend technologies.",
-    url: "https://jeanbosco-dev.vercel.app//projects",
+    url: "https://jeanbosco-dev.vercel.app/projects",
     siteName: "Jean Bosco Portfolio",
     images: [
       {
-        url: "https://your-portfolio-domain.com/og-projects.jpg",
+        url: "https://jeanbosco-dev.vercel.app/Jean Bosco.png",
         width: 1200,
         height: 630,
         alt: "Jean Bosco Projects",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description:
       "Showcasing React, Next.js, and Node.js projects created by Jean Bosco.",
     creator: "@yourTwitterHandle",
-    images: ["https://your-portfolio-domain.com/og-projects.jpg"],
+    images: ["https://jeanbosco-dev.vercel.app/Jean Bosco.jpg"],
   },
 };
 

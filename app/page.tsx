@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "Frontend Developer",
     "Backend Developer",
     "Software Engineer",
+    "Bikorimana",
   ],
   authors: [{ name: "Jean Bosco" }],
   creator: "Jean Bosco",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     description:
       "Crafting modern web applications with clean design and robust backend solutions.",
     url: "https://jeanbosco-dev.vercel.app",
-    siteName: "Jean Bosco Portfolio",
+    siteName: "Jean Bosco",
     images: [
       {
         url: "https://your-portfolio-domain.com/og-image.jpg",

@@ -2,19 +2,19 @@ import ContactForm from "../components/main/Contact";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Jean Bosco Portfolio",
+  title: "Contact | Jean Bosco",
   description:
     "Get in touch with Jean Bosco — full-stack web developer specializing in React, Next.js, and Node.js. Let's collaborate on your next project.",
   keywords: [
-    "Jean Bosco contact",
-    "contact web developer",
-    "hire full-stack developer",
-    "Rwanda developer contact",
-    "Next.js developer Rwanda",
-    "React developer Jean Bosco",
-    "contact portfolio",
-    "Jean Bosco email",
+    "Jean Bosco",
+    "contact Jean Bosco",
+    "Rwanda full-stack developer",
+    "React Next.js developer",
+    "hire web developer Rwanda",
+    "freelance developer contact",
+    "web development Rwanda",
   ],
+
   authors: [{ name: "Jean Bosco" }],
   creator: "Jean Bosco",
   metadataBase: new URL("https://jeanbosco-dev.vercel.app"),
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Reach out to Jean Bosco to discuss collaborations, freelance projects, or full-time opportunities.",
     url: "https://jeanbosco-dev.vercel.app/contact",
-    siteName: "Jean Bosco Portfolio",
+    siteName: "Jean Bosco",
     images: [
       {
         url: "https://your-portfolio-domain.com/og-contact.jpg",
